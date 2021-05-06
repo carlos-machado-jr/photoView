@@ -6,7 +6,7 @@ const routes: Routes = [
     pathMatch:'full', 
     redirectTo: '/fotos'
   },
-  {path: 'fotos', loadChildren: './modules/modules.module#ModulesModule'}
+  {path: 'fotos', loadChildren: () => import('./modules/modules.module').then(m => m.ModulesModule)}
 ];
 
 @NgModule({
