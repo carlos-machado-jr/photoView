@@ -6,7 +6,6 @@ import { FormularioComponent } from './formulario.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 
@@ -21,7 +20,6 @@ import {MatButtonModule} from '@angular/material/button';
     ReactiveFormsModule,
 
     MatFormFieldModule,
-    MatSelectModule,
     MatInputModule,
     MatButtonModule
   ]

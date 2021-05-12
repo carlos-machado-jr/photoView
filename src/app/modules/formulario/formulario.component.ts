@@ -18,13 +18,12 @@ export class FormularioComponent implements OnInit {
   formGroup: FormGroup;
 
 
-  constructor(
-              private formBuilder: FormBuilder) {
+  constructor(private formBuilder: FormBuilder) {
 
    }
 
   ngOnInit(): void {
-    this.createForm()
+    this.createForm();
   }
 
   onSubmit() {
@@ -34,8 +33,8 @@ export class FormularioComponent implements OnInit {
 
   createForm(){
     this.formGroup = this.formBuilder.group({
-      nomeFoto: ['', [Validators.required,Validators.minLength(3)]],
-      urlFoto: ['', [Validators.required, Validators.minLength(3)]],
+      nomeFoto: [null, [Validators.required,Validators.minLength(3)]],
+      urlFoto: [null, [Validators.required, Validators.minLength(3)]],
       descricao: []
     })
   }
