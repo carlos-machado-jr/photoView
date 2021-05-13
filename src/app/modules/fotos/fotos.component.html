@@ -1,1 +1,35 @@
-<p>fotos works!</p>
+
+
+
+
+<div class="body-page">
+        <button  (click)="listUpdate()" mat-raised-button color="secundary">Atualizar</button>
+    <div class="row">
+        <div class="col-4 margin-top"  *ngFor="let foto of caixinhaFoto; index as i; trackBy: identify">
+                <mat-card>
+                    <mat-card-header>
+                        <div mat-card-avatar class="card-avatar"></div>
+                        <mat-card-title> {{foto.autor}} </mat-card-title>
+                        <mat-card-subtitle> {{foto.nome}} </mat-card-subtitle>
+                    </mat-card-header>
+                    <img mat-card-image src="../../../assets/imagens/image-1.jpg" alt="">
+                    <mat-card-content>  
+
+                        <p>
+                                {{ foto.descricao}}
+
+                        </p>
+
+                    </mat-card-content>
+                    <mat-card-actions align="end">
+                    <button mat-raised-button color="primary" >GOSTEI</button>  
+                    <button mat-button >COMPARTILHAR</button>  
+                    </mat-card-actions>
+    
+                </mat-card>
+        </div>
+        
+        
+        
+    </div>
+</div>

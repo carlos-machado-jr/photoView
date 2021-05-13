@@ -35,7 +35,8 @@ export class FormularioComponent implements OnInit {
     this.formGroup = this.formBuilder.group({
       nomeFoto: [null, [Validators.required,Validators.minLength(3)]],
       urlFoto: [null, [Validators.required, Validators.minLength(3)]],
-      descricao: []
+      descricao: [null],
+      autor: [null, [Validators.required, Validators.minLength(3)]],
     })
   }
 

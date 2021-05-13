@@ -1,0 +1,16 @@
+.card{
+    max-width: 400px;
+}
+.card-avatar{
+    background-size: cover;
+    background-color: white;
+}
+.margin-top{
+    margin-top: 20px;
+}
+.body-page{
+    padding: 60px;
+}
+.mat-card{
+    
+}

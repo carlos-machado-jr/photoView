@@ -33,14 +33,26 @@
       <div class="form-group row">
         <div class="col-sm">
           <mat-form-field appearance="outline">
+            <mat-label>Autor </mat-label>
+            <input matInput placeholder="Nome do autor" formControlName="autor"  >
+            <mat-error *ngIf="formGroup.get('urlFoto').hasError('required')">É necessário digitar o nome do autor!</mat-error>
+            <mat-error *ngIf="formGroup.get('urlFoto').hasError('minlength')">É necessário um nome com mais de {{ formGroup.get('urlFoto').errors.minlength.requiredLength }} caracteres.</mat-error>
+          </mat-form-field>
+        </div>
+
+      </div>
+
+      <div class="form-group row">
+        <div class="col-sm">
+          <mat-form-field appearance="outline">
             <mat-label>Descrição da foto</mat-label>
             <input matInput placeholder="Descrição da foto" formControlName="descricao"  >
           </mat-form-field>
         </div>
 
-
-        
       </div>
+
+     
 
         <div class="buttons">
       

@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { FotosRoutingModule } from './fotos-routing.module';
 import { FotosComponent } from './fotos.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card'
 
 
 @NgModule({
@@ -11,7 +13,9 @@ import { FotosComponent } from './fotos.component';
   ],
   imports: [
     CommonModule,
-    FotosRoutingModule
+    FotosRoutingModule,
+    MatButtonModule,
+    MatCardModule
   ]
 })
 export class FotosModule { }
