@@ -18,3 +18,14 @@
 .buttons button{
     width: 200px;
 }
+.alert{
+    display: flex;
+    justify-content: space-between;
+}
+
+.closed{
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.conteudo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20vh 50vh 30vh;
+    grid-template-areas:
+        "user2 tab tab"
+        "user2 user user"
+        "user2 user user";
+}
+.user{
+    grid-area: user2;
+    background: red;
+}
+.userInfo{
+    grid-area: user;
+    background: blue;
+
+}
+.tab{
+    grid-area: tab;
+    background: black;
+    
+}

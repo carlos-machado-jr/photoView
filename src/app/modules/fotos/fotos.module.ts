@@ -15,7 +15,8 @@ import { MatCardModule } from '@angular/material/card'
     CommonModule,
     FotosRoutingModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    
   ]
 })
 export class FotosModule { }

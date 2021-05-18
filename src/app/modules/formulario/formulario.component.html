@@ -1,9 +1,14 @@
 
 
 <div class=" form-body">
-    
+    <div *ngIf="success" class="alert alert-success" role="alert">
+        <span>Foto cadastrada com sucesso!!!</span>
+
+       <mat-icon class="closed" (click)="closed()" >close</mat-icon>
+      </div>
     
     <form [formGroup]="formGroup" (ngSubmit)="onSubmit()">
+      
 
       <div class="form-group row">
         <div class="col-sm">

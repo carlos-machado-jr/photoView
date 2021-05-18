@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FirebaseService } from '../../core/services/firebase.service';
+import { MatDialog } from '@angular/material/dialog';
+import { DialogComponent } from '../../shared/components/dialog/dialog.component';
+import { Router } from '@angular/router';
 
 
 export class Fotos{
@@ -16,9 +20,14 @@ export class Fotos{
 export class FormularioComponent implements OnInit {
 
   formGroup: FormGroup;
+  success = false;
 
-
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private db: FirebaseService,
+    private dialog: MatDialog,
+    private router: Router
+  ) {
 
    }
 
@@ -28,7 +37,21 @@ export class FormularioComponent implements OnInit {
 
   onSubmit() {
     // aqui você pode implementar a logica para fazer seu formulário salvar
-    console.log(this.formGroup);
+
+    if(this.formGroup.valid){
+      this.db.createFoto(this.formGroup.value);
+      this.success = true
+      setTimeout(x => {
+            this.closed();
+
+            this.router.navigate(['/fotos']);
+      }, 1000)
+    }
+
+  }
+
+  closed(){
+    this.success = false
   }
 
   createForm(){
