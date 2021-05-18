@@ -1,9 +1,20 @@
 import { Injectable } from '@angular/core';
+import { AngularFirestoreCollection, AngularFirestore } from '@angular/fire/firestore';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FirebaseService {
 
-  constructor() { }
+  colecoesFotos: AngularFirestoreCollection
+
+  constructor(
+    private af: AngularFirestore
+  ) {
+    this.colecoesFotos = this.af.collection("Fotos");
+   }
+
+   createFoto(foto){
+    return this.colecoesFotos.add(foto);
+   }
 }
