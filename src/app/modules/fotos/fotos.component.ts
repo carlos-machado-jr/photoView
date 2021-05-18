@@ -26,18 +26,5 @@ export class FotosComponent implements OnInit {
     return item.name;
   }
 
-  listUpdate(){
-    this.caixinhaFoto = [
-      {nome:'Paisagem', autor:'Juliano Souza', descricao:'Essa imagem foi dedicada a alguem'},
-      {nome:'Cassino', autor:'Gabigol', descricao:'Essa imagem foi dedicada a alguem'},
-      {nome:'Estrada', autor:'Desconhecido', descricao:'Essa imagem foi dedicada a alguem'},
-      {nome:'Playground', autor:'Geovan', descricao:'Essa imagem foi dedicada a alguem'},
-      {nome:'Arte nacional', autor:'Dagoberto', descricao:'Essa imagem foi dedicada a alguem'},
-      {nome:'Piramides', autor:'Desconhecido', descricao:'Essa imagem foi dedicada a alguem'},
-      {nome:'Carro', autor:'Desconhecido', descricao:'Essa imagem foi dedicada a alguem'},
-      {nome:'Pinturas', autor:'Pitagoras', descricao:'Essa imagem foi dedicada a alguem'}
-  
-    ]
-    
-  }
+ 
 }
