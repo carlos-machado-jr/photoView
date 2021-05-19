@@ -6,6 +6,7 @@
         "user2 tab tab"
         "user2 user user"
         "user2 user user";
+    color: white
 }
 .user{
     grid-area: user2;
